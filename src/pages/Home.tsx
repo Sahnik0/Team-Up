@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Rocket, Calendar, MessageSquare, ChevronRight, Check, Star, Moon, Sun } from 'lucide-react';
+import { Users, Rocket, Calendar, MessageSquare, ChevronRight, Check, Star} from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/context/AuthContext';
 import { motion } from 'framer-motion';
@@ -9,26 +9,8 @@ import { Helmet } from 'react-helmet';
 export default function Home() {
   const { user } = useAuth();
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
-  const [darkMode, setDarkMode] = useState(() => {
-    // Check for saved dark mode preference on initial load
-    const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'true' ? true : false;
-  });
 
-  // Apply dark mode class to document when dark mode changes
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', darkMode.toString());
-  }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   const features = [
     {
@@ -64,18 +46,7 @@ export default function Home() {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden transition-colors duration-200">
           {/* Dark Mode Toggle */}
           <div className="fixed top-6 right-6 z-50">
-            <Button 
-              variant="outline" 
-              size="icon" 
-              onClick={toggleDarkMode}
-              className="rounded-full shadow-md dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-            >
-              {darkMode ? (
-                <Sun className="h-5 w-5 text-yellow-400" />
-              ) : (
-                <Moon className="h-5 w-5 text-blue-600" />
-              )}
-            </Button>
+            
           </div>
 
           {/* Hero Section */}
@@ -239,35 +210,35 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact</h3>
                   <ul className="space-y-2">
-                    <li className="text-gray-600 dark:text-gray-300 text-sm">Email: tb123983@gmail.com</li>
+                    <li className="text-gray-600 dark:text-gray-300 text-sm">Email: shreyassaha00@gmail.com</li>
                     <li>
                       <a 
-                        href="https://x.com/sahnik_biswas" 
+                        href="https://x.com/Shreyas17OP" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm inline-flex items-center"
                       >
-                        Twitter: @sahnik_biswas
+                        Twitter: @Shreyas17OP
                       </a>
                     </li>
                     <li>
                       <a 
-                        href="https://github.com/Sahnik0" 
+                        href="https://github.com/Shreyas0017" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm inline-flex items-center"
                       >
-                        GitHub: Sahnik0
+                        GitHub: Shreyas0017
                       </a>
                     </li>
                     <li>
                       <a 
-                        href="https://www.linkedin.com/in/sahnik-biswas-8514012a7/" 
+                        href="https://www.linkedin.com/in/shreyas-saha" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm inline-flex items-center"
                       >
-                        LinkedIn: Sahnik Biswas
+                        LinkedIn: Shreyas Saha
                       </a>
                     </li>
                   </ul>

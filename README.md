@@ -188,6 +188,7 @@ service cloud.firestore {
   <tr>
     <td align="center"><a href="https://github.com/Sahnik0"><img src="https://github.com/Sahnik0.png" width="100px;" alt=""/><br /><sub><b>Sahnik Biswas</b></sub></a></td>
     <td align="center"><a href="https://github.com/sanks011"><img src="https://github.com/sanks011.png" width="100px;" alt=""/><br /><sub><b>Sankalpa Sarkar</b></sub></a></td>
+     <td align="center"><a href="https://github.com/Shreyas0017"><img src="https://github.com/Shreyas0017.png" width="100px;" alt=""/><br /><sub><b>Shreyas Saha</b></sub></a></td>
   </tr>
 </table>  
 
